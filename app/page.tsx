@@ -34,13 +34,16 @@ export default function MenuPage() {
           />
 
           {/* Halo ring */}
-          <div
+          <img
+            src="/logo.jpg"
+            alt="Santo Pecado"
             className="animate-halo mx-auto mb-4"
             style={{
               width: 70,
               height: 70,
-              border: "3px solid var(--dorado)",
               borderRadius: "50%",
+              objectFit: "cover",
+              border: "3px solid var(--dorado)",
             }}
           />
 
