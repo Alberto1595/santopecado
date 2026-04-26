@@ -39,8 +39,8 @@ export default function MenuPage() {
             alt="Santo Pecado"
             className="animate-halo mx-auto mb-4"
             style={{
-              width: 70,
-              height: 70,
+              width: 200,
+              height: 200,
               borderRadius: "50%",
               objectFit: "cover",
               border: "3px solid var(--dorado)",
