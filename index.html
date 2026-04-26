@@ -133,24 +133,28 @@
 
   .nav {
     display: flex;
-    gap: 4px;
-    padding: 10px 16px;
+    gap: 6px;
+    padding: 12px 16px;
     min-width: max-content;
     justify-content: center;
   }
 
   .nav-btn {
-    background: transparent;
-    border: 1px solid rgba(241,196,15,0.35);
-    color: rgba(245,240,232,0.75);
-    padding: 11px 20px;
-    border-radius: 5px;
+    background: rgba(241,196,15,0.07);
+    border: 1.5px solid rgba(241,196,15,0.45);
+    color: rgba(245,240,232,0.9);
+    padding: 14px 22px;
+    border-radius: 8px;
     font-family: 'Cinzel', serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.09em;
+    font-size: 0.88rem;
+    letter-spacing: 0.07em;
     cursor: pointer;
     transition: all 0.25s;
     white-space: nowrap;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .nav-btn:hover, .nav-btn.active {
@@ -158,7 +162,8 @@
     color: var(--negro);
     border-color: var(--dorado);
     font-weight: 700;
-    box-shadow: 0 0 15px rgba(241,196,15,0.3);
+    box-shadow: 0 0 20px rgba(241,196,15,0.4);
+    transform: translateY(-1px);
   }
 
   /* ── MAIN CONTENT ── */
@@ -361,6 +366,30 @@
   }
 
   /* ── FOOTER ── */
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    transition: all 0.25s;
+    min-height: 46px;
+  }
+
+  .social-btn:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
   footer {
     text-align: center;
     padding: 30px 20px;
@@ -983,11 +1012,57 @@
   <p>"Aquí el sabor abre caminos." — Santo Pecado Burguer &amp; More</p>
   <p style="margin-top: 6px; opacity: 0.5;">De la Garza #211, Fracc. Santa María, Cadereyta Jiménez</p>
   <p style="margin-top: 8px; opacity: 0.6; font-size: 0.8rem;">🕕 Jueves a domingo 6:30pm a 11:00pm</p>
-  <div style="margin-top: 16px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="https://wa.me/528132451249" target="_blank" style="color: var(--dorado2); text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.08em;">📲 WhatsApp</a>
-    <a href="https://www.facebook.com/share/1Kh95wxCKr/" target="_blank" style="color: var(--dorado2); text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.08em;">📘 Facebook</a>
-    <a href="https://www.instagram.com/santopecado_cadereyta?igsh=MWl0eXA1N3RlYm1kNw==" target="_blank" style="color: var(--dorado2); text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.08em;">📸 Instagram</a>
-    <a href="https://maps.app.goo.gl/4S9iXwqUNAuaSnC39" target="_blank" style="color: var(--dorado2); text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.08em;">📍 Google Maps</a>
+
+  <div style="margin-top: 24px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/528132451249" target="_blank" class="social-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.001 2C6.478 2 2 6.478 2 12.001c0 1.77.463 3.478 1.344 4.978L2 22l5.197-1.326A9.955 9.955 0 0012.001 22C17.523 22 22 17.523 22 12.001 22 6.478 17.523 2 12.001 2z" fill="#25D366"/>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.15-.198.296-.768.966-.94 1.164-.174.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.174.2-.298.3-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1Kh95wxCKr/" target="_blank" class="social-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="4" fill="#1877F2"/>
+        <path d="M16.5 3H14C11.8 3 10 4.8 10 7v2H8v3h2v9h3v-9h2.5l.5-3H13V7c0-.6.4-1 1-1h2.5V3z" fill="#fff"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/santopecado_cadereyta?igsh=MWl0eXA1N3RlYm1kNw==" target="_blank" class="social-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+            <stop offset="0%" stop-color="#fdf497"/>
+            <stop offset="5%" stop-color="#fdf497"/>
+            <stop offset="45%" stop-color="#fd5949"/>
+            <stop offset="60%" stop-color="#d6249f"/>
+            <stop offset="90%" stop-color="#285AEB"/>
+          </radialGradient>
+        </defs>
+        <rect width="24" height="24" rx="5.5" fill="url(#ig-grad)"/>
+        <rect x="6" y="6" width="12" height="12" rx="3" stroke="#fff" stroke-width="1.5" fill="none"/>
+        <circle cx="12" cy="12" r="3.2" stroke="#fff" stroke-width="1.5" fill="none"/>
+        <circle cx="17" cy="7" r="0.8" fill="#fff"/>
+      </svg>
+      <span>Instagram</span>
+    </a>
+
+    <!-- Google Maps -->
+    <a href="https://maps.app.goo.gl/4S9iXwqUNAuaSnC39" target="_blank" class="social-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" fill="#EA4335"/>
+        <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13V2z" fill="#C5221F"/>
+        <circle cx="12" cy="9" r="3" fill="#fff"/>
+      </svg>
+      <span>Google Maps</span>
+    </a>
+
   </div>
 </footer>
 
