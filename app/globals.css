@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --negro: #0a0a0a;
+  --negro2: #111111;
+  --rojo: #c0392b;
+  --rojo-fuego: #e74c3c;
+  --naranja: #e67e22;
+  --dorado: #f1c40f;
+  --dorado2: #d4a017;
+  --teal: #1a6b73;
+  --teal-claro: #2d9da8;
+  --blanco: #f5f0e8;
+  --gris: #2a2a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--negro);
+  color: var(--blanco);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--negro2); }
+::-webkit-scrollbar-thumb { background: var(--dorado2); border-radius: 3px; }
+
+/* Flame background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 30% 60% at 0% 70%, rgba(192,57,43,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 60% at 100% 30%, rgba(26,107,115,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(230,126,34,0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Nav hide scrollbar */
+.nav-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
+
+/* Animations */
+@keyframes haloGlow {
+  from { box-shadow: 0 0 20px var(--dorado), 0 0 40px rgba(241,196,15,0.3); }
+  to   { box-shadow: 0 0 30px var(--dorado), 0 0 70px rgba(241,196,15,0.5), 0 0 100px rgba(241,196,15,0.15); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleFade {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  30%       { transform: scale(1.3); }
+  60%       { transform: scale(0.9); }
+}
+
+.animate-halo        { animation: haloGlow 3s ease-in-out infinite alternate; }
+.animate-fade-in     { animation: fadeIn 0.4s ease forwards; }
+.animate-title-fade  { animation: titleFade 1.2s ease forwards; }
+.animate-slide-in    { animation: slideInRight 0.35s cubic-bezier(0.4,0,0.2,1) forwards; }
+.animate-slide-out   { animation: slideOutRight 0.3s cubic-bezier(0.4,0,0.2,1) forwards; }
+.animate-badge-pop   { animation: badgePop 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.animate-cart-bounce { animation: cartBounce 0.4s ease; }
