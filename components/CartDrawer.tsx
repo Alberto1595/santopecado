@@ -35,8 +35,7 @@ export default function CartDrawer() {
     const mensaje =
       `🛒 *Pedido — ${negocio.nombre}*\n\n` +
       lineas.join("\n") +
-      `\n\n💰 *Total: $${total}*\n\n` +
-      `📍 _Por favor indícame tu dirección o si pasas a recoger._`;
+      `\n\n💰 *Total: $${total}*`;
 
     const encoded = encodeURIComponent(mensaje);
     const url = `https://wa.me/${negocio.whatsapp}?text=${encoded}`;
