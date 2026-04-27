@@ -197,7 +197,7 @@ export const secciones: Seccion[] = [
         nombre: "Papas Supremas",
         descripcion: "300g de papas bañadas en queso gratinado y queso cheddar, con 150g de boneles bañados en salsa ranch y búfalo, más 100g de carne asada",
         precio: 150,
-        variantes: [{ label: "Chica", precio: 150 }, { label: "Grande", precio: 170 }],
+        variantes: [{ label: "Sin Carne", precio: 150 }, { label: "Con Carne", precio: 170 }],
         badge: "👑 Especial",
       },
       {

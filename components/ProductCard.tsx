@@ -6,7 +6,7 @@ import { useCart } from "./CartContext";
 export default function ProductCard({ producto }: { producto: Producto }) {
   const { addItem, openCart } = useCart();
   const [selectedVariante, setSelectedVariante] = useState(
-    producto.variantes ? producto.variantes[0] : null
+    producto.variantes ? producto.variantes[producto.variantes.length - 1] : null
   );
   const [added, setAdded] = useState(false);
 
