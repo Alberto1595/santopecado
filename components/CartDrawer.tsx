@@ -323,7 +323,7 @@ export default function CartDrawer() {
             <textarea
               value={direccion}
               onChange={(e) => setDireccion(e.target.value)}
-              placeholder="Ej: Calle Juárez 45, Col. Centro, entre Morelos y Allende"
+              placeholder="Escribe tu direccion completa"
               rows={4}
               className="w-full rounded-xl p-4 text-sm resize-none outline-none transition-all"
               style={{
