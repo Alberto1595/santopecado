@@ -12,7 +12,7 @@ export const negocio = {
   whatsapp: "528132451249",
   redes: {
     whatsapp: "https://wa.me/528132451249",
-    facebook: "https://www.facebook.com/share/1Kh95wxCKr/",
+    facebook: "https://www.facebook.com/share/19JPpqntQR/?mibextid=wwXIfr",
     instagram: "https://www.instagram.com/santopecado_cadereyta?igsh=MWl0eXA1N3RlYm1kNw==",
     maps: "https://maps.app.goo.gl/4S9iXwqUNAuaSnC39",
   },
